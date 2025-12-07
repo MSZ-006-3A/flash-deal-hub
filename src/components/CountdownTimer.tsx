@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 interface CountdownTimerProps {
   targetDate: Date;
   label?: string;
   variant?: 'default' | 'compact' | 'hero';
+  className?: string;
 }
 
-export const CountdownTimer = ({ targetDate, label, variant = 'default' }: CountdownTimerProps) => {
+export const CountdownTimer = ({ targetDate, label, variant = 'default', className }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 0,
@@ -66,7 +68,7 @@ export const CountdownTimer = ({ targetDate, label, variant = 'default' }: Count
   }
 
   return (
-    <div className="flex items-center gap-1">
+    <div className={cn("flex items-center gap-1", className)}>
       <div className="countdown-box text-xs">
         {formatNumber(timeLeft.hours)}
       </div>
