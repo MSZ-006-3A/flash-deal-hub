@@ -1,0 +1,183 @@
+export interface Deal {
+  id: string;
+  name: string;
+  image: string;
+  salePrice: number;
+  originalPrice: number;
+  discount: number;
+  unitsSold: number;
+  platform: 'shopee' | 'tiktok';
+  category: string;
+  endsAt: Date;
+  startsAt?: Date;
+  isUpcoming?: boolean;
+}
+
+export const mockDeals: Deal[] = [
+  {
+    id: '1',
+    name: 'Wireless Bluetooth Earbuds Pro with Active Noise Cancellation',
+    image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop',
+    salePrice: 29.99,
+    originalPrice: 89.99,
+    discount: 67,
+    unitsSold: 2453,
+    platform: 'shopee',
+    category: 'Electronics',
+    endsAt: new Date(Date.now() + 2 * 60 * 60 * 1000),
+  },
+  {
+    id: '2',
+    name: 'Korean Skincare Set - 10 Step Routine Bundle',
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+    salePrice: 45.00,
+    originalPrice: 120.00,
+    discount: 63,
+    unitsSold: 1892,
+    platform: 'tiktok',
+    category: 'Beauty',
+    endsAt: new Date(Date.now() + 1 * 60 * 60 * 1000),
+  },
+  {
+    id: '3',
+    name: 'Baby Stroller Lightweight Foldable Travel Pram',
+    image: 'https://images.unsplash.com/photo-1586005890528-cec0e1fd2401?w=400&h=400&fit=crop',
+    salePrice: 89.00,
+    originalPrice: 199.00,
+    discount: 55,
+    unitsSold: 567,
+    platform: 'shopee',
+    category: 'Mom & Baby',
+    endsAt: new Date(Date.now() + 3 * 60 * 60 * 1000),
+  },
+  {
+    id: '4',
+    name: 'Smart Watch Fitness Tracker with Heart Rate Monitor',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop',
+    salePrice: 35.99,
+    originalPrice: 79.99,
+    discount: 55,
+    unitsSold: 3201,
+    platform: 'tiktok',
+    category: 'Electronics',
+    endsAt: new Date(Date.now() + 45 * 60 * 1000),
+  },
+  {
+    id: '5',
+    name: 'Oversized Cotton T-Shirt Unisex Streetwear',
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+    salePrice: 12.99,
+    originalPrice: 34.99,
+    discount: 63,
+    unitsSold: 8923,
+    platform: 'shopee',
+    category: 'Fashion',
+    endsAt: new Date(Date.now() + 90 * 60 * 1000),
+  },
+  {
+    id: '6',
+    name: 'Portable Blender USB Rechargeable Mini Juicer',
+    image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=400&h=400&fit=crop',
+    salePrice: 19.99,
+    originalPrice: 49.99,
+    discount: 60,
+    unitsSold: 4521,
+    platform: 'tiktok',
+    category: 'Home',
+    endsAt: new Date(Date.now() + 120 * 60 * 1000),
+  },
+  {
+    id: '7',
+    name: 'LED Ring Light 10 inch with Tripod Stand',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=400&fit=crop',
+    salePrice: 24.99,
+    originalPrice: 59.99,
+    discount: 58,
+    unitsSold: 2134,
+    platform: 'shopee',
+    category: 'Electronics',
+    endsAt: new Date(Date.now() + 75 * 60 * 1000),
+  },
+  {
+    id: '8',
+    name: 'Vitamin C Serum with Hyaluronic Acid',
+    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop',
+    salePrice: 14.99,
+    originalPrice: 39.99,
+    discount: 63,
+    unitsSold: 6789,
+    platform: 'tiktok',
+    category: 'Beauty',
+    endsAt: new Date(Date.now() + 30 * 60 * 1000),
+  },
+];
+
+export const upcomingDeals: Deal[] = [
+  {
+    id: 'u1',
+    name: 'Gaming Mechanical Keyboard RGB Backlit',
+    image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400&h=400&fit=crop',
+    salePrice: 49.99,
+    originalPrice: 129.99,
+    discount: 62,
+    unitsSold: 0,
+    platform: 'shopee',
+    category: 'Electronics',
+    endsAt: new Date(Date.now() + 8 * 60 * 60 * 1000),
+    startsAt: new Date(Date.now() + 2 * 60 * 60 * 1000),
+    isUpcoming: true,
+  },
+  {
+    id: 'u2',
+    name: 'Yoga Mat Non-Slip Exercise Fitness Mat',
+    image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop',
+    salePrice: 15.99,
+    originalPrice: 45.99,
+    discount: 65,
+    unitsSold: 0,
+    platform: 'tiktok',
+    category: 'Sports',
+    endsAt: new Date(Date.now() + 10 * 60 * 60 * 1000),
+    startsAt: new Date(Date.now() + 3 * 60 * 60 * 1000),
+    isUpcoming: true,
+  },
+  {
+    id: 'u3',
+    name: 'Silk Pillowcase Set of 2 - Premium Quality',
+    image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400&h=400&fit=crop',
+    salePrice: 22.99,
+    originalPrice: 59.99,
+    discount: 62,
+    unitsSold: 0,
+    platform: 'shopee',
+    category: 'Home',
+    endsAt: new Date(Date.now() + 12 * 60 * 60 * 1000),
+    startsAt: new Date(Date.now() + 4 * 60 * 60 * 1000),
+    isUpcoming: true,
+  },
+  {
+    id: 'u4',
+    name: 'Reusable Baby Diapers Cloth Nappies Set',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop',
+    salePrice: 28.99,
+    originalPrice: 69.99,
+    discount: 59,
+    unitsSold: 0,
+    platform: 'tiktok',
+    category: 'Mom & Baby',
+    endsAt: new Date(Date.now() + 14 * 60 * 60 * 1000),
+    startsAt: new Date(Date.now() + 5 * 60 * 60 * 1000),
+    isUpcoming: true,
+  },
+];
+
+export const categories = [
+  { id: 'electronics', name: 'Electronics', icon: '📱', count: 1234 },
+  { id: 'fashion', name: 'Fashion', icon: '👗', count: 2456 },
+  { id: 'beauty', name: 'Beauty', icon: '💄', count: 1876 },
+  { id: 'home', name: 'Home', icon: '🏠', count: 987 },
+  { id: 'mom-baby', name: 'Mom & Baby', icon: '👶', count: 654 },
+  { id: 'sports', name: 'Sports', icon: '⚽', count: 432 },
+  { id: 'food', name: 'Food & Drinks', icon: '🍔', count: 876 },
+  { id: 'toys', name: 'Toys & Games', icon: '🎮', count: 543 },
+];
